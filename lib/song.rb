@@ -52,6 +52,7 @@ class Song
     @@all.sort_by!{|song| song.name}
   end 
   
+<<<<<<< HEAD
   def self.new_from_filename(filename)
     new_song = filename.split(" - ")
     song_name = new_song[1].gsub(".mp3", "")
@@ -73,5 +74,10 @@ class Song
   
   def self.destroy_all
     self.all.clear
+=======
+  def self.new_from_filename(song)
+    new_song = song.split("-")
+    binding.pry
+>>>>>>> a43681e9140462487313518b5452efe523809774
   end 
 end
